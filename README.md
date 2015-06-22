@@ -14,6 +14,7 @@ you wish to run the library. You can also run `script/bootstrap` to fetch them a
 
 * list_goi -- candidate gene list
 * all_tcga -- all the sample metadata
+* LoF_rv, LoF_lf, nsSNP_rv, nsSNP_lf -- all the truncation and missense, rare and low frequency variants
 
 
 Main functions

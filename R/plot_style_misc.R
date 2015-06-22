@@ -46,5 +46,24 @@ extractPatient <- function(data){
     Patients <- data[["Patient"]]
     if(all(is.na(Patients))) stop("No patients specified")
   }
-  return(Patients)
+  return(unique(Patients))
+}
+
+#' Unify ggplot2 dimensions
+#'
+#' Make ggplot2 objects the same width and height
+#' @param width unify width data Defaults to TRUE
+#' @param height unify height Defaults to TRUE
+
+unifyPlotDim <- function(pl, width = T, height = T){
+  pl <- lapply(pl, ggplotGrob)
+  widths <- do.call(unit.pmax, lapply(pl, "[[", "widths"))
+  heights <- do.call(unit.pmax, lapply(pl, "[[", "heights"))
+  if(width){
+    pl <- lapply(pl, function(g) {g$widths <- widths; g})
+  }
+  if(height){
+    pl <- lapply(pl, function(g) {g$heights <- heights; g})
+  }
+  return(pl)
 }

@@ -15,13 +15,8 @@ plotMutRNASeq <- function(data, Gene=NA, transformed = T){
   }
   # get RNASeq data
   all_mRNA <- getRNASeq(Gene)
-  # figure out the patients, whether supplied is a character list or a mutation df
-  if(is.null(dim(data))){
-    Patients <- data
-  } else {
-    Patients <- data[["Patient"]]
-    if(all(is.na(Patients))) stop("No patients specified")
-  }
+  # figure out the patients 
+  Patients <- extractPatient(data)
   # drop diseases with no variant
   all_mRNA <- droplevels(subset(all_mRNA, disease %in% droplevels(subset(all_mRNA, Patient %in% Patients))$disease))
   if(transformed){

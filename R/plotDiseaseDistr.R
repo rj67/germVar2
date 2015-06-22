@@ -6,15 +6,15 @@
 #' @param transformed Whether to plot variance-stablized counts Defaults to TRUE.
 #' @keywords RNASeq
 
-plotDiseaseDistr <- function(data, ){
+plotDiseaseDistr <- function(data, all_patients = all_tcga){
   gender_color <- c("#e31a1c", "#1f78b4")
   # figure out the patients 
   Patients <- extractPatient(data)
   
-  to_plot <- subset(all_tcga, !duplicated(disease2)[c("disease2", "study_size", "femme_ratio")]
+  to_plot <- subset(all_patients, !duplicated(disease2))[c("disease2", "study_size", "femme_ratio")]
   to_plot$expected_F <- to_plot$study_size * to_plot$femme_ratio * length(Patients) / sum(to_plot$study_size)
   to_plot$expected_M <- to_plot$study_size * (1-to_plot$femme_ratio) * length(Patients) / sum(to_plot$study_size)
-  to_plot %<>% plyr::join(., subset(all_tcga, !duplicated(Patient))[c("Patient", "disease2", "gender")] %>% subset(., Patient %in% Patients) %>% group_by(., disease2) %>% 
+  to_plot %<>% plyr::join(., subset(all_patients, !duplicated(Patient))[c("Patient", "disease2", "gender")] %>% subset(., Patient %in% Patients) %>% group_by(., disease2) %>% 
                             dplyr::summarise(., actual_size = length(Patient), actual_F = actual_size*sum(gender[!is.na(gender)]=="FEMALE")/length(gender[!is.na(gender)]),
                                              actual_M = actual_size - actual_F ))
   to_plot$actual_size <- replaZero(to_plot$actual_size)
