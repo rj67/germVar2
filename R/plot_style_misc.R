@@ -33,3 +33,18 @@ labelDisease <- function(p){
                                         "LUSC"="Lung Squam-" ))
   return(p)
 }
+
+#' Extract patient names from input data
+#'
+#' input data maybe a vector or data frame
+#' @param data input data
+
+extractPatient <- function(data){
+  if(is.null(dim(data))){
+    Patients <- data
+  } else {
+    Patients <- data[["Patient"]]
+    if(all(is.na(Patients))) stop("No patients specified")
+  }
+  return(Patients)
+}

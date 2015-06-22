@@ -20,4 +20,11 @@ Main functions
 -----------
 
 * plotMutRNASeq -- Plot mutation RNASeq levels 
+* plotDiseaseDistr -- Plot cancer type distribution given a list of mutations
 
+
+
+Dependency
+-----------
+
+* dplry, reshape2, ggplot2, magrittr, RColorbrewer
