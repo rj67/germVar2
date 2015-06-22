@@ -1,5 +1,5 @@
 Package: germVar2
-Title: What the Package Does (one line, title case)
+Title: TCGA patient germline variants
 Version: 0.0.0.9000
 Authors@R: person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph)

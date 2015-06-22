@@ -33,5 +33,5 @@ plotDiseaseDistr <- function(data, all_patients = all_tcga){
   p1 <- labelDisease(p1)
   p1 <- p1 + theme( panel.grid.major.x=element_blank())
   p1 <- p1 + theme(axis.text.x = element_text(angle = 45, hjust = 1, size=rel(.8)))
-  
+  p1
 }
