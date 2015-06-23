@@ -6,12 +6,10 @@ TCGA cancer patient germline variants in a bunch of candidate genes
 Data objects
 -------
 
-The following markups are supported.  The dependencies listed are required if
-you wish to run the library. You can also run `script/bootstrap` to fetch them all.
-
 * list_goi -- candidate gene list
-* all_tcga -- all the sample metadata
-* LoF_var, nsSNP_var -- all the truncation and missense variants, variant centric dataframe
+* all_patients -- all the patient metadata
+* LoF_var, nsSNP_var -- variant centric dataframe, containing all the truncation and missense variants, 
+* LoF_mut, nsSNP_mut -- patient centric dataframe
 
 
 Main functions
@@ -25,4 +23,4 @@ Main functions
 Dependency
 -----------
 
-* dplry, reshape2, ggplot2, magrittr, RColorbrewer
+* dplyr, reshape2, ggplot2, magrittr, RColorbrewer

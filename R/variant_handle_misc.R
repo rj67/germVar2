@@ -17,12 +17,12 @@ showSNP <- function(data, show=T){
   }
 }
 
+
 #' Select info from LoF df  
 #'
 #' select relevant infor mation from LoF df object
 #' @param data LoF variant df
 #' @param show Whether to view the df Defaults to TRUE.
-
 
 showLoF <- function(data, show=T){
   cols <- c("Gene", "AAChange.p", "EFF", "AC2", "TAC2", "AN2", "TEAC2", "EAN", "ESP_AC", "ESP_AN", "ESP_EA_AC", "ESP_EA_AN", "X2kG_AC", "ExAC_AdjAC", 
@@ -35,4 +35,16 @@ showLoF <- function(data, show=T){
   }else{
     return(data[cols])
   }
+}
+
+
+#' Select info from mutation df  
+#'
+#' select relevant infor mation from LoF df object
+#' @param data mut df
+
+showMut <- function(data){
+  cols <- c("uid", "Patient","Gene", "event_uid", "AAChange", "EFF", "Class","disease2", "DP", "AB", "N_hom","agez", "gender")
+  #print(setdiff(cols, colnames(data)))
+  return(data[cols])
 }

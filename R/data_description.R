@@ -20,4 +20,3 @@
 #' @name all_patients
 #' @usage data(all_patients)
 #' @format A data frame with 8852 rows and 11 variables
-NULL
