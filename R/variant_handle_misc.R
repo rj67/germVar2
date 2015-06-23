@@ -6,8 +6,8 @@
 
 
 showSNP <- function(data, show=T){
-  cols <- c("Gene", "AAChange.s", "EFF", "AC2", "TAC2", "AN2", "TEAC2", "EAN", "ESP_AC", "ESP_AN", "ESP_EA_AC", "ESP_EA_AN", "X2kG_AC", "ExAC_AdjAC", 
-            "pred_patho", "dele", "Clinvar", "RCVaccession", "cosm_acount", "cosm_scount", "ma_pred", "PHRED", 
+  cols <- c("Gene", "AAChange.s", "EFF", "AC2", "TAC2", "AN2", "TEAC2", "EAN", "ESP_AC", "ESP_AN", "ESP_EA_AC", "ESP_EA_AN", "X2kG_AC", "ExAC_AdjAC", "rare",
+            "pred_patho", "dele", "Clinvar", "RCVaccession", "cosm_acount", "cosm_scount", "ma_pred", "PHRED", "MDG", "CPG", "Class",
             "NALT_AD_med", "TALT_AD_med", "NAB_med", "TAB_med", "Transcript", "AAChange", "uid")
   #print(setdiff(cols, colnames(data)))
   if(show){
@@ -25,8 +25,8 @@ showSNP <- function(data, show=T){
 #' @param show Whether to view the df Defaults to TRUE.
 
 showLoF <- function(data, show=T){
-  cols <- c("Gene", "AAChange.p", "EFF", "AC2", "TAC2", "AN2", "TEAC2", "EAN", "ESP_AC", "ESP_AN", "ESP_EA_AC", "ESP_EA_AN", "X2kG_AC", "ExAC_AdjAC", 
-            "tier1", "tier2", "NMD_HC", "LoF_filter", "ExonRank", "TotalExon", "CDS_frac",
+  cols <- c("Gene", "AAChange.p", "EFF", "AC2", "TAC2", "AN2", "TEAC2", "EAN", "ESP_AC", "ESP_AN", "ESP_EA_AC", "ESP_EA_AN", "X2kG_AC", "ExAC_AdjAC", "rare",
+            "tier1", "tier2", "NMD_HC", "LoF_filter", "ExonRank", "TotalExon", "CDS_frac", "MDG", "CPG", "Class",
             "NALT_AD_med", "TALT_AD_med", "NAB_med", "TAB_med", "Transcript", "AAChange", "uid")
   
   #print(setdiff(cols, colnames(data)))

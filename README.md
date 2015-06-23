@@ -11,13 +11,17 @@ Data objects
 * LoF_var, nsSNP_var -- variant centric dataframe, containing all the truncation and missense variants, 
 * LoF_mut, nsSNP_mut -- patient centric dataframe
 
-
 Main functions
 -----------
 
 * plotMutRNASeq -- Plot mutation RNASeq levels 
 * plotDiseaseDistr -- Plot cancer type distribution given a list of mutations
 
+Juptyer notebooks
+-----------
+
+* project_overview -- Plot mutation RNASeq levels 
+* plotDiseaseDistr -- Plot cancer type distribution given a list of mutations
 
 
 Dependency
