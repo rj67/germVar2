@@ -3,9 +3,6 @@ germVar2
 
 TCGA cancer patient germline variants in a bunch of candidate genes 
 
-0. This library converts the raw markup to HTML. See the list of [supported markup formats](#markups) below.
-
-
 Data objects
 -------
 
@@ -14,7 +11,7 @@ you wish to run the library. You can also run `script/bootstrap` to fetch them a
 
 * list_goi -- candidate gene list
 * all_tcga -- all the sample metadata
-* LoF_rv, LoF_lf, nsSNP_rv, nsSNP_lf -- all the truncation and missense, rare and low frequency variants, variant centric dataframe
+* LoF_var, nsSNP_var -- all the truncation and missense variants, variant centric dataframe
 
 
 Main functions
