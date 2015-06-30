@@ -29,7 +29,7 @@ plotDiseaseDistr <- function(data, all_patients = all_tcga){
   p1 <- p1 + geom_bar(stat = "identity", aes(fill=variable), data=subset(to_long, actual), alpha=1, width=0.45)
   p1 <- p1 + scale_fill_manual(values=gender_color, guide=guide_legend(title="Observed", keywidth=0.9, keyheight=0.9), labels=c("Female", "Male"))
   p1 <- p1 + scale_color_manual(values=gender_color, guide=guide_legend(title="Expected", keywidth=0.9, keyheight=0.9), labels=c("Female", "Male"))
-  p1 <- p1 + theme_bw() + ylab("Number of patients") + xlab("") + theme(legend.position=c(0.9,0.6))
+  p1 <- p1 + theme_bw() + ylab("Number of patients") + xlab("") + theme(legend.position="top")
   p1 <- labelDisease(p1)
   p1 <- p1 + theme( panel.grid.major.x=element_blank())
   p1 <- p1 + theme(axis.text.x = element_text(angle = 45, hjust = 1, size=rel(.8)))

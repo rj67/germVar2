@@ -8,8 +8,8 @@ Data objects
 
 * list_goi -- candidate gene list
 * all_patients -- all the patient metadata
-* LoF_var, nsSNP_var -- variant centric dataframe, containing all the truncation and missense variants, 
-* LoF_mut, nsSNP_mut -- patient centric dataframe
+* LoF_vars, nsSNP_vars -- variant centric dataframe, containing all the truncation and missense variants, 
+* LoF_muts, nsSNP_muts -- patient centric dataframe
 
 Main functions
 -----------
@@ -20,8 +20,8 @@ Main functions
 Juptyer notebooks
 -----------
 
-* project_overview -- Plot mutation RNASeq levels 
-* plotDiseaseDistr -- Plot cancer type distribution given a list of mutations
+* project_overview -- Samples, candidate gene, all variants overview.
+* known_cancer_gene_variants -- Summary variants in known cancer genes.
 
 
 Dependency
