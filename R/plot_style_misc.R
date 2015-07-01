@@ -67,3 +67,17 @@ unifyPlotDim <- function(pl, width = T, height = T){
   }
   return(pl)
 }
+
+#' Fill all combination of the two input columns
+#'
+#' input data maybe a vector or data frame
+#' @param data input data
+#' @param X column 1 Defaults to "disease2"
+#' @param Y column 2 Defaults to "Gene"
+
+expand_outer <- function(data, X = "disease2", Y = "Gene"){
+  df <- data.frame(var1 = rep(unique(data[[X]]), times=length(unique(data[[Y]]))), 
+                      var2 = rep(unique(data[[Y]]), each=length(unique(data[[X]])))) 
+  colnames(df) <- c(X, Y)
+  return(df)
+}
