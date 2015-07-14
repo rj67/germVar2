@@ -4,7 +4,7 @@
 \alias{labelDisease}
 \title{Translate disease abbreviation}
 \usage{
-labelDisease(p)
+labelDisease(p, axis = "x", ...)
 }
 \arguments{
 \item{p}{ggplot2 object}

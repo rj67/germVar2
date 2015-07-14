@@ -4,17 +4,12 @@
 \alias{plotDiseaseDistr}
 \title{Plot mutation disease types}
 \usage{
-plotDiseaseDistr(data, all_patients = all_tcga)
+plotDiseaseDistr(data)
 }
 \arguments{
 \item{data}{Supplied mutation data or a list of patients  Defaults to TRUE.}
-
-\item{Gene}{Which gene to plot Defaults to NA.}
-
-\item{transformed}{Whether to plot variance-stablized counts Defaults to TRUE.}
 }
 \description{
 Plot the cancer type distribution of supplied patient list
 }
-\keyword{RNASeq}
 

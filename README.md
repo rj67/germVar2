@@ -22,9 +22,10 @@ Juptyer notebooks
 
 * project_overview -- Samples, candidate gene, all variants overview.
 * known_cancer_gene_variants -- Summary variants in known cancer genes.
-
+* loss_of_heterozygousity_analysis -- LOH of all germline variants
+* low_frequency_variants_association -- Assocation test of low frequency missense and truncation variants comparing to 1000G and ESP
 
 Dependency
 -----------
 
-* dplyr, reshape2, ggplot2, magrittr, RColorbrewer
+* plyr, dplyr, reshape2, ggplot2, magrittr, RColorbrewer, gridExtra

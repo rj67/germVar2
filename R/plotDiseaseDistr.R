@@ -2,11 +2,8 @@
 #'
 #' Plot the cancer type distribution of supplied patient list
 #' @param data Supplied mutation data or a list of patients  Defaults to TRUE.
-#' @param Gene Which gene to plot Defaults to NA.
-#' @param transformed Whether to plot variance-stablized counts Defaults to TRUE.
-#' @keywords RNASeq
 
-plotDiseaseDistr <- function(data, all_patients = all_tcga){
+plotDiseaseDistr <- function(data){
   gender_color <- c("#e31a1c", "#1f78b4")
   # figure out the patients 
   Patients <- extractPatient(data)
@@ -33,5 +30,6 @@ plotDiseaseDistr <- function(data, all_patients = all_tcga){
   p1 <- labelDisease(p1)
   p1 <- p1 + theme( panel.grid.major.x=element_blank())
   p1 <- p1 + theme(axis.text.x = element_text(angle = 45, hjust = 1, size=rel(.8)))
+  p1 <- p1 + theme(legend.justification="left",  legend.direction = "horizontal", legend.box = "horizontal")
   p1
 }

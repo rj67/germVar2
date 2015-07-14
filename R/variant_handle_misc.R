@@ -44,7 +44,7 @@ showLoF <- function(data, show=T){
 #' @param data mut df
 
 showMut <- function(data){
-  cols <- c("uid", "Patient","Gene", "event_uid", "AAChange", "EFF", "Class", "MDG", "CPG","disease2", "DP", "AB", "N_hom","agez", "gender", "nA","nB")
+  cols <- c("uid", "Patient","Gene", "event_uid", "AAChange", "EFF", "CHROM", "Class", "MDG", "CPG","disease2", "DP", "AB", "N_hom","agez", "gender", "nA","nB")
   #print(setdiff(cols, colnames(data)))
   return(data[cols])
 }

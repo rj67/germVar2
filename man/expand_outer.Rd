@@ -14,6 +14,6 @@ expand_outer(data, X = "disease2", Y = "Gene")
 \item{Y}{column 2 Defaults to "Gene"}
 }
 \description{
-input data maybe a vector or data frame
+Form the outer product of the input column X,Y, typically disease2, Gene
 }
 
