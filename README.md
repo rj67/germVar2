@@ -3,13 +3,13 @@ germVar2
 
 Supplementary materials for "Pan-cancer analysis reveals frequent germline mutations in known cancer genes"
 
-Install
+#Install
 
     install.packages("devtools")
     library(devtools)
     install_github("rj67/germVar2")
 
-Data objects
+#Data objects
 
 Dataframes that can be loaded
 
