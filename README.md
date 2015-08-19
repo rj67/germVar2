@@ -29,17 +29,19 @@ Dataframes that can be loaded
 |P6-A5OG |ACC      |  45| -0.2248333|TRUE |WHITE |FEMALE |
 |OR-A5JY |ACC      |  68|  1.0679583|TRUE |WHITE |FEMALE |
 
-* LoF_vars, nsSNP_vars -- variant information, each row is a variant and columns are various annotation
+* LoF_vars -- variant information, each row is a variant and columns are various annotation
 
 |Gene     |uid            |EFF                | TAC2|   AN2|rare |AAChange             |Transcript      |
 |:--------|:--------------|:------------------|----:|-----:|:----|:--------------------|:---------------|
 |TNFRSF18 |1-1139268-G-A  |stop_gained        |    1| 16810|TRUE |p.Arg221*/c.661C>T   |ENST00000379265 |
 |TNFRSF18 |1-1140761-AC-A |frameshift_variant |    1| 17208|TRUE |p.Val100fs/c.298delG |ENST00000379265 |
 
-|              |Gene    |uid           |EFF              | TAC2|   AN2|rare |AAChange             |Transcript      |dele  |
-|:-------------|:-------|:-------------|:----------------|----:|-----:|:----|:--------------------|:---------------|:-----|
-|1-1149118-G-A |TNFRSF4 |1-1149118-G-A |missense_variant |    1| 16918|TRUE |p.Arg65Cys/c.193C>T  |ENST00000379236 |FALSE |
-|1-3301758-A-G |PRDM16  |1-3301758-A-G |missense_variant |    3| 17614|TRUE |p.Asn161Asp/c.481A>G |ENST00000270722 |FALSE |
+*  nsSNP_vars -- variant information, each row is a variant and columns are various annotation
+
+|              |Gene    |uid           |EFF              | TAC2|   AN2|rare |AAChange             |Transcript      |dele  |RCVaccession | cosm_scount|
+|:-------------|:-------|:-------------|:----------------|----:|-----:|:----|:--------------------|:---------------|:-----|:------------|-----------:|
+|1-1149118-G-A |TNFRSF4 |1-1149118-G-A |missense_variant |    1| 16918|TRUE |p.Arg65Cys/c.193C>T  |ENST00000379236 |FALSE |RCV000082860 |          NA|
+|1-3301758-A-G |PRDM16  |1-3301758-A-G |missense_variant |    3| 17614|TRUE |p.Asn161Asp/c.481A>G |ENST00000270722 |FALSE |NA           |           4|
 
 * LoF_muts, nsSNP_muts -- variant carrier information, each row corresponds to the carrier of a particular variant.
 
