@@ -3,7 +3,7 @@ germVar2
 
 Supplementary materials for 
 #### Pan-cancer sequencing analysis reveals frequent germline mutations in cancer genes 
-Ruomu Jiang, William Lee, Nadeem Riaz, Chris Sander, Timothy J Mitchison*, Debora S Marks*
+Ruomu Jiang, William Lee, Nadeem Riaz, Chris Sander, Timothy J Mitchison^*, Debora S Marks^*
 
 Install
 -----------
