@@ -17,10 +17,10 @@ Dataframes that can be loaded
 
 * list_goi -- candidate gene list
 
-|Gene |Approved.Name    |Ensembl.Gene    |MDG   |CPG   |Class       |
-|:----|:----------------|:---------------|:-----|:-----|:-----------|
-|ABI1 |abl-interactor 1 |ENSG00000136754 |FALSE |FALSE |Other       |
-|ABI2 |abl-interactor 2 |ENSG00000138443 |FALSE |FALSE |PutativeTSG |
+|    |Gene  |Approved.Name                |Ensembl.Gene    |MDG  |CPG  |Class |
+|:---|:-----|:----------------------------|:---------------|:----|:----|:-----|
+|83  |ATM   |ATM serine/threonine kinase  |ENSG00000149311 |TRUE |TRUE |H-TSG |
+|135 |BRCA1 |breast cancer 1, early onset |ENSG00000012048 |TRUE |TRUE |H-TSG |
 
 * all_patients -- all the patient information
 
@@ -31,19 +31,34 @@ Dataframes that can be loaded
 
 * LoF_vars -- variant information, each row is a variant and columns are various annotation
 
-|Gene     |uid            |EFF                | TAC2|   AN2|rare |AAChange             |Transcript      |
-|:--------|:--------------|:------------------|----:|-----:|:----|:--------------------|:---------------|
-|TNFRSF18 |1-1139268-G-A  |stop_gained        |    1| 16810|TRUE |p.Arg221*/c.661C>T   |ENST00000379265 |
-|TNFRSF18 |1-1140761-AC-A |frameshift_variant |    1| 17208|TRUE |p.Val100fs/c.298delG |ENST00000379265 |
+|     |Gene  |uid              |EFF                | TAC2|   AN2|rare |AAChange               |Transcript      |
+|:----|:-----|:----------------|:------------------|----:|-----:|:----|:----------------------|:---------------|
+|3444 |BRCA1 |17-41199682-C-T  |stop_gained        |    1| 17630|TRUE |p.Trp711*/c.2133G>A    |ENST00000491747 |
+|3445 |BRCA1 |17-41201208-TG-T |frameshift_variant |    1| 17630|TRUE |p.Gln1732fs/c.5194delC |ENST00000493795 |
+
+* LoF_muts -- variant carrier information, each row corresponds to the carrier of a particular variant.
+
+|    |Gene  |uid              |Patient |disease2 |AAChange               | DP|        AB|N_hom | nA| nB|
+|:---|:-----|:----------------|:-------|:--------|:----------------------|--:|---------:|:-----|--:|--:|
+|8   |BRCA1 |17-41247941-T-G  |04-1336 |OV       |c.453A>C               | 39| 0.9411765|FALSE |  3|  0|
+|205 |BRCA1 |17-41201208-TG-T |09-2045 |OV       |p.Gln1732fs/c.5194delC | 96| 0.8541667|FALSE |  1|  0|
 
 *  nsSNP_vars -- variant information, each row is a variant and columns are various annotation
 
-|              |Gene    |uid           |EFF              | TAC2|   AN2|rare |AAChange             |Transcript      |dele  |RCVaccession | cosm_scount|
-|:-------------|:-------|:-------------|:----------------|----:|-----:|:----|:--------------------|:---------------|:-----|:------------|-----------:|
-|1-1149118-G-A |TNFRSF4 |1-1149118-G-A |missense_variant |    1| 16918|TRUE |p.Arg65Cys/c.193C>T  |ENST00000379236 |FALSE |RCV000082860 |          NA|
-|1-3301758-A-G |PRDM16  |1-3301758-A-G |missense_variant |    3| 17614|TRUE |p.Asn161Asp/c.481A>G |ENST00000270722 |FALSE |NA           |           4|
+|                |Gene  |uid             |EFF              | TAC2|   AN2|rare |AAChange               |Transcript      |dele  |RCVaccession              | cosm_scount|
+|:---------------|:-----|:---------------|:----------------|----:|-----:|:----|:----------------------|:---------------|:-----|:-------------------------|-----------:|
+|17-41201181-C-A |BRCA1 |17-41201181-C-A |missense_variant |    1| 17630|TRUE |p.Gly1788Val/c.5363G>T |ENST00000357654 |TRUE  |RCV000048961;RCV000031241 |          NA|
+|17-41215920-G-A |BRCA1 |17-41215920-G-A |missense_variant |    1| 17630|TRUE |p.Ala1708Val/c.5123C>T |ENST00000357654 |FALSE |NA                        |          NA|
 
-* LoF_muts, nsSNP_muts -- variant carrier information, each row corresponds to the carrier of a particular variant.
+* nsSNP_muts -- variant carrier information, each row corresponds to the carrier of a particular variant.
+
+|   |Gene  |uid             |Patient |disease2 |AAChange              |  DP|        AB|N_hom | nA| nB|
+|:--|:-----|:---------------|:-------|:--------|:---------------------|---:|---------:|:-----|--:|--:|
+|3  |BRCA1 |17-41245027-G-A |02-0047 |GBM      |p.Arg841Trp/c.2521C>T | 330| 0.4575758|FALSE |  1|  1|
+|89 |BRCA1 |17-41245027-G-A |05-5425 |LUAD     |p.Arg841Trp/c.2521C>T | 195| 0.5179487|FALSE |  3|  1|
+
+
+
 
 Juptyer notebooks
 -----------
